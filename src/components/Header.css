@@ -1,0 +1,90 @@
+.Banner {
+    padding-top: 50px;
+    float: left;
+}
+
+.Name {
+    color: white;
+    font-size: 38px;
+    font-family: NameFont, serif;
+    float: left;
+    font-weight: bold;
+    margin-left: 200px;
+}
+
+.Name:hover {
+    cursor: pointer;
+}
+
+.NavBar {
+    position: absolute;
+    width: 300px;
+    padding: 10px;
+    right: 90px;
+    color: black;
+    display: flex;
+}
+
+.NavBarElement {
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+}
+
+.NavBarElement:hover {
+    text-decoration: none;
+    background-size: 100% 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 30px;
+    background-image: linear-gradient(to right, #ffffff, #000000);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.Header-Content {
+    background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/75/32/zKYG1E.jpg");
+    min-height: 100vh;
+}
+
+.Header-Statement {
+    color: white;
+    text-align: center;
+    padding-top: 300px;
+}
+
+.Polytech-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5%;
+}
+
+.Polytech-link {
+
+}
+
+.linkedin-logo:hover {
+    cursor: pointer;
+}
+
+.email-logo:hover {
+    cursor: pointer;
+}
+
+.arrow-down {
+    margin-top: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@font-face {
+    font-family: "NameFont";
+    src: url("../styles/SansationLight.ttf");
+}
