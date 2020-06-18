@@ -1,2 +1,3 @@
 # my-portfolio
-My Portfolio using React
+
+*My Portfolio created with React*
