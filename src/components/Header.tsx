@@ -15,7 +15,7 @@ const Header = () => {
                 </div>
             </div>
             <div className='Header-Content'>
-                <div className='display-3 text-center Header-Statement'>3rd Year Computer Science student at
+                <div className='display-3 text-center Header-Statement'> Computer Science student at
                     <a className='Polytech-link' target='_blank' rel="noopener noreferrer"
                        href='http://unice.fr/polytechnice/fr#.XuuiLRNxeHs'>
                         <img className='Polytech-logo'
@@ -26,11 +26,11 @@ const Header = () => {
                 <div className="container row">
                     <a title='Linkedin' target='_blank' rel="noopener noreferrer"
                        href='https://www.linkedin.com/in/yiemboiro-asar%C3%A9el-dadiouari-9ab235174/'> <FaLinkedinIn
-                        className='linkedin-logo' fontSize="100px"/> </a>
+                        className='linkedin-logo' fontSize="35px"/> </a>
                 </div>
                 <div className="container row">
                     <a title='Email' href='mailto:asareel.y.dadiouari@gmail.com'> <FaMailBulk className='email-logo'
-                                                                                              fontSize="100px"/> </a>
+                                                                                              fontSize="35px"/> </a>
                 </div>
                 <FaArrowDown className='arrow-down' fontSize="50px"/>
             </div>

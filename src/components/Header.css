@@ -9,7 +9,7 @@
     font-family: NameFont, serif;
     float: left;
     font-weight: bold;
-    margin-left: 200px;
+    margin-left: 220px;
 }
 
 .Name:hover {
@@ -20,7 +20,7 @@
     position: absolute;
     width: 300px;
     padding: 10px;
-    right: 90px;
+    right: 189px;
     color: black;
     display: flex;
 }
@@ -48,8 +48,9 @@
 }
 
 .Header-Content {
-    background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/75/32/zKYG1E.jpg");
-    min-height: 100vh;
+    /*background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/75/32/zKYG1E.jpg");*/ /** Image Ordinateur + Café*/
+    background-image: url("https://jessicaroots.com/wp-content/uploads/2018/03/portfolio-background-header.jpg");
+    min-height: 99.9vh;
 }
 
 .Header-Statement {
@@ -69,16 +70,27 @@
 
 }
 
+.linkedin-logo {
+    color: #4b9ee2;
+}
+
+.email-logo {
+    color: #d53a3a;
+
+}
+
 .linkedin-logo:hover {
     cursor: pointer;
+    font-size: 50px;
 }
 
 .email-logo:hover {
     cursor: pointer;
+    font-size: 50px;
 }
 
 .arrow-down {
-    margin-top: 200px;
+    margin-top: 350px;
     display: block;
     margin-left: auto;
     margin-right: auto

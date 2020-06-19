@@ -1,0 +1,35 @@
+.Work {
+    min-height: 120vh;
+}
+
+.Table {
+    padding-bottom: 50px;
+}
+
+.my-top-projects {
+    color: black;
+    font-family: Courier New, monospace;
+    font-weight: lighter;
+    font-size: 35px;
+    padding-top: 50px;
+}
+
+.Polyquiz {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.Polyquiz:hover {
+
+}
+
+.Birdstagram {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.Birdstagram:hover {
+
+}

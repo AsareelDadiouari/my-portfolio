@@ -1,0 +1,29 @@
+.Footer {
+    background-color: #2a2a2a;
+}
+
+.intouch {
+    padding-bottom: 50px;
+}
+
+.intouchtext {
+    padding-top: 50px;
+    font-size: 25px;
+}
+
+.Footer-navBar {
+    background-color: #212121;
+    display: flex;
+    height: 50px;
+    width: 100%;
+
+}
+
+.Footer-navBar-element {
+    color: white;
+    letter-spacing: 5px;
+    padding: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

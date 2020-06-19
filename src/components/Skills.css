@@ -1,0 +1,37 @@
+.skills {
+    min-height: 50vh;
+    background-color: #171717;
+}
+
+.title-about-me {
+    color: whitesmoke;
+    font-family: Courier New, monospace;
+    font-weight: lighter;
+    font-size: 35px;
+    padding-top: 50px;
+}
+
+.title-skills {
+    color: whitesmoke;
+    font-family: Courier New, monospace;
+    font-weight: lighter;
+    font-size: 35px;
+    padding-top: 50px;
+}
+
+.skills-set {
+    padding-bottom: 100px;
+}
+
+.description {
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.languages {
+    color: white;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+
