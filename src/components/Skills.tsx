@@ -6,7 +6,7 @@ const Skills = () => {
     return (
         <div className='container-fluid skills'>
             <div className='container'>
-                <p className=' title-about-me'>About Me</p>
+                <p id="id" className=' title-about-me'>About Me</p>
                 <p className='description'>Hello I'm Asaréel <b>/(Asareel)/ </b>, a computer science student who
                     previously worked mostly
                     through class projects with web frameworks <br/> and libraries like Angular and React. During this
