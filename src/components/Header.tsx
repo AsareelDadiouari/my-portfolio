@@ -23,9 +23,9 @@ const Header = () => {
             <div className='Header-Content'>
                 <p className='display-3 text-center Header-Statement'> Computer Science student at
                     <a className='Polytech-link' target='_blank' rel="noopener noreferrer"
-                       href='http://unice.fr/polytechnice/fr#.XuuiLRNxeHs'>
-                        <img className='Polytech-logo'
-                             src='https://pbs.twimg.com/profile_images/1150709245161234434/BH2GzCSH_400x400.png'
+                       href='https://www.uqac.ca/'>
+                        <img className='Uqac-logo'
+                             src='https://www.uqac.ca/wp-content/themes/uqac/assets/images/uqac.svg'
                              alt='Logo'/>
                     </a>
                 </p>
