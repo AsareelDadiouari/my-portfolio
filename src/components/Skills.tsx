@@ -7,31 +7,43 @@ const Skills = () => {
         <div className='container-fluid skills'>
             <div className='container'>
                 <p id="id" className=' title-about-me'>About Me</p>
-                <p className='description'>Hello I'm Asaréel <b>/(Asareel)/ </b>, a computer science student who
+                <p className='description'>Hello I'm Asaréel <b>/(Asareel)/ </b>, a student pursuing
+                     a master degree in computer science at <a href='https://wwwuqac.ca'>UQAC</a> (Saguenay, Quebec) who
                     previously worked mostly
-                    through class projects with web frameworks <br/> and libraries like Angular and React. During this
-                    year i've also worked
-                    a lot with Java and made couples of projects in teamwork. My <br/> most personal projects was
-                    involving mostly C and C++
-                    with which I created an API with Qt and small games with SDL2.
+                    through class projects with web frameworks and libraries like Angular and React. I have a 3 month
+                    intership experience at a startup, and another work experience where I was hired as a web developer.
+                    You can find my comptlete and detailed resume on my linkedin. <br/> Thank you for reading !
                 </p>
-                <p className=' title-skills'>My Skills</p>
+                <p className=' title-skills'>Skills</p>
                 <div className='skills-set'>
-                    <p className="languages">Angular</p>
-                    <ProgressBar srOnly now={60} label={`${60}%`} animated={true} max={100}/>
+                    <p className="languages">Frontend: React, Angular, VueJs</p>
+                    <p className="languages">Backend: Node.js (Express), ASP .Net Core </p>
+                    <p className="languages">Programming: Javascript, Typescript, C#, Java, Python </p>
+                    <p className="languages">Databases: MongoDB, MySQL</p>
+                    <p className="languages">Other: Git, IntelliJ, Rider, WebStorm, Android Studio, Visual Studio / Code</p>
+                </div>
+                <p className=' title-skills'>Work Experience</p>
+                <div className='skills-set'>
+                    <p className="languages">
+                        <span style={{fontWeight: "bold"}}>Leap careers, Web developer - freelance </span> <br/>
+                        Jan 2022 - Apr 2022 <br/>
 
-                    <p className="languages">React</p>
-                    <ProgressBar srOnly now={55} label={`${55}%`} animated={true} max={100}/>
+                        • Migrated to the version 2.0 of the current platform from React to Angular (improved website 
+                        responsiveness, support for different mobile formats, bug fixes). <br/>
+                        • Implemented new functionalities on the mobile application (push notifications, chats…). <br/>
+                        • Deployment with AWS. <br/>
+                        Stack: Angular, Ionic, Amplify, Route 53, Lambda, GoDaddy
 
-                    <p className="languages">Android</p>
-                    <ProgressBar srOnly now={50} label={`${50}%`} animated={true} max={100}/>
+                    </p>
+                    <p className="languages">
+                        <span  style={{fontWeight: "bold"}}>wever, Full stack Developer Intern </span> <br/>
+                        Jun 2021 - Aug 2021 <br/>
 
-                    <p className="languages">Java</p>
-                    <ProgressBar srOnly className='prog' now={65} label={`${65}%`} animated={true} max={100}/>
-
-                    <p className="languages">C/C++</p>
-                    <ProgressBar srOnly now={80} label={`${80}%`} animated={true} max={100}/>
-
+                        • Worked in a team of 3 to implement new modules to the company\’s main product and helped 
+                        reduce code redundancy. <br/>
+                        • Implemented an internal chat system that permits account managers to discuss with their clients. <br/>
+                        Stack: ReactJs, Docker, GitLab, Symphony 5, PHP 
+                    </p>
                 </div>
             </div>
         </div>

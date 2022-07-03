@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container text-center intouch">
                 <p className=' text-white intouchtext'>Stay in touch with me</p>
                 <a title='Linkedin' target='_blank' rel="noopener noreferrer"
-                   href='https://www.linkedin.com/in/yiemboiro-asar%C3%A9el-dadiouari-9ab235174/'> <FaLinkedinIn
+                   href='https://www.linkedin.com/in/asareel-y-dadiouari/'> <FaLinkedinIn
                     className='linkedin-logo' fontSize="35px"/> </a>
                 <a title='Email' href='mailto:asareel.y.dadiouari@gmail.com'> <FaMailBulk className='email-logo'
                                                                                           fontSize="35px"/> </a>
