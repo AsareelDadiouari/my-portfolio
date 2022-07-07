@@ -3,16 +3,21 @@ import './Skills.css'
 import {ProgressBar} from "react-bootstrap";
 
 const Skills = () => {
+    const openInTab = (url: string): void => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
+
     return (
         <div className='container-fluid skills'>
             <div className='container'>
                 <p id="id" className=' title-about-me'>About Me</p>
                 <p className='description'>Hello I'm Asaréel <b>/(Asareel)/ </b>, a student pursuing
-                     a master degree in computer science at <a href='https://wwwuqac.ca'>UQAC</a> (Saguenay, Quebec) who
+                     a master degree in computer science at <span className='link-design' onClick={() => openInTab("https://www.uqac.ca")}>UQAC</span> (Saguenay, Quebec) who
                     previously worked mostly
                     through class projects with web frameworks and libraries like Angular and React. I have a 3 month
-                    intership experience at a startup, and another work experience where I was hired as a web developer.
-                    You can find my comptlete and detailed resume on my linkedin. <br/> Thank you for reading !
+                    intership experience at a startup, and another work experience where I was hired as a freelance web developer for 4 month.
+                    You can find my comptlete and detailed resume on my <span className='link-design' onClick={() => openInTab('https://www.linkedin.com/in/asareel-y-dadiouari/')}>Linkedin</span>. <br/> Thank you for reading !
                 </p>
                 <p className=' title-skills'>Skills</p>
                 <div className='skills-set'>
@@ -45,6 +50,13 @@ const Skills = () => {
                         Stack: ReactJs, Docker, GitLab, Symphony 5, PHP 
                     </p>
                 </div>
+            </div>
+            <div>
+                {
+                    /*
+                                <iframe src="https://www.slideshare.net/slideshow/embed_code/key/4WJBXVR7XE0uX3?hostedIn=slideshare&page=upload" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                    */
+                }
             </div>
         </div>
     );

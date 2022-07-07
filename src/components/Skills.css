@@ -34,4 +34,13 @@
     font-family: "Lucida Console", Monaco, monospace;
 }
 
+.link-design {
+    color: rgb(107, 107, 238);
+    text-decoration: underline;
+}
+
+.link-design:hover {
+    cursor: pointer;
+}
+
 

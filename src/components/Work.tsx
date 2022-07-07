@@ -3,6 +3,11 @@ import './Work.css'
 import {Button, Table} from 'react-bootstrap'
 
 const Work = () => {
+    const openInTab = (url: string): void => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
+
     return (
         <div className="container Work">
             <p className="my-top-projects">Projects</p>
@@ -78,7 +83,10 @@ const Work = () => {
                 </tbody>
 
             </Table>
-            <Button type='button' href='https://github.com/AsareelDadiouari?tab=repositories'> See Github Repo</Button>
+            <Button type='button' onClick={() => openInTab('https://github.com/AsareelDadiouari?tab=repositories')}> See Github Repo</Button>
+            <Button type='button' onClick={() => openInTab('https://drive.google.com/file/d/1ZZ1dvSS3yUbxu5VypzBQJv1eKSz_XoUl/view?usp=sharing')}> English resume</Button>
+            <Button type='button' onClick={() => openInTab('https://drive.google.com/file/d/1IfVHiTusJe6JaOnewOJADopRbRE1F9J8/view?usp=sharing')} > French resume</Button>
+
         </div>
     );
 };
