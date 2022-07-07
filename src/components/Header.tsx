@@ -21,7 +21,7 @@ const Header = () => {
                 </div>
             </div>
             <div className='Header-Content'>
-                <p className='display-3 text-center Header-Statement'> Computer Science student at
+                <p className='display-3 text-center Header-Statement'> Computer Science student at <br/>
                     <a className='Uqac-link' target='_blank' rel="noopener noreferrer"
                        href='https://www.uqac.ca/'>
                         <img height="100px" className='Uqac-logo'
