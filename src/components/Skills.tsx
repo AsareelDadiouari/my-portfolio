@@ -1,6 +1,5 @@
 import React from 'react';
 import './Skills.css'
-import {ProgressBar} from "react-bootstrap";
 
 const Skills = () => {
     const openInTab = (url: string): void => {
