@@ -1,6 +1,6 @@
 import React, {Fragment, Props} from 'react';
 import './Header.css'
-import {FaArrowDown, FaLinkedinIn, FaMailBulk} from "react-icons/fa"
+import {FaArrowDown, FaArrowUp, FaLinkedinIn, FaMailBulk} from "react-icons/fa"
 import {Link} from 'react-router-dom'
 
 const Header = (props: any) => {

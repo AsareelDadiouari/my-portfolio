@@ -3,15 +3,19 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Skills from "../../components/Skills";
 import Work from "../../components/Work";
+import './Landing.css'
+import { FaArrowUp } from 'react-icons/fa';
 
 const Landing = () => {
-    const headerRef = React.useRef<HTMLDivElement>(null)
-    const aboutRef = React.useRef<HTMLDivElement>(null)
-    const projectRef = React.useRef<HTMLDivElement>(null)
+    const headerRef = React.useRef<HTMLDivElement>(null);
+    const aboutRef = React.useRef<HTMLDivElement>(null);
+    const projectRef = React.useRef<HTMLDivElement>(null);
 
-    const [homeClick, setHomeClick] = useState(false)
-    const [projectClick, setProjectClick] = useState(false)
-    const [aboutClick, setAboutClick] = useState(false)
+    const [homeClick, setHomeClick] = useState(false);
+    const [projectClick, setProjectClick] = useState(false);
+    const [aboutClick, setAboutClick] = useState(false);
+
+    const [scrollTop, setScrollTop] = useState(false);
 
     useEffect(() => {
         if(homeClick){
@@ -28,7 +32,15 @@ const Landing = () => {
             aboutRef.current?.scrollIntoView({ behavior: "smooth" });
             setAboutClick(false)
         }
-    })
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300)
+                setScrollTop(true);
+            else
+                setScrollTop(false);
+        });
+
+    });
 
     return (
         <div>
@@ -41,6 +53,10 @@ const Landing = () => {
         <Skills reference={aboutRef}/> {/* About me, Work Experience */}
         <Work reference={projectRef}/> {/* Projects */}
         <Footer/>
+        {
+            scrollTop && 
+            <FaArrowUp href='#id' onClick={() => setHomeClick(true)} className='arrow-up' fontSize="50px"/>
+        }
         </div>
     )
 }

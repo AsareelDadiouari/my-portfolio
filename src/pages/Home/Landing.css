@@ -1,0 +1,17 @@
+.arrow-up {
+    place-self:end;
+    position:sticky;
+    bottom: 20px;
+    
+    /* visual styling */
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+}
+
+.arrow-up:hover {
+    cursor: pointer;
+}
