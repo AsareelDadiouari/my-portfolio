@@ -66,10 +66,6 @@
     width: 5%;
 }
 
-.Polytech-link {
-
-}
-
 .linkedin-logo {
     color: #4b9ee2;
 }
@@ -99,4 +95,12 @@
 @font-face {
     font-family: "NameFont";
     src: url("../styles/SansationLight.ttf");
+}
+
+.Uqac-link:hover {
+    cursor: pointer;
+}
+
+.arrow-down:hover {
+    cursor: pointer;
 }

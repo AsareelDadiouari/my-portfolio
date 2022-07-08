@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Skills.css'
 
-const Skills = () => {
+const Skills = (props: any) => {
     const openInTab = (url: string): void => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
@@ -10,7 +10,11 @@ const Skills = () => {
     return (
         <div className='container-fluid skills'>
             <div className='container'>
-                <p id="id" className=' title-about-me'>About Me</p>
+                <p id="id" 
+                className=' title-about-me' 
+                ref={props.reference}>
+                    About Me
+                </p>
                 <p className='description'>Hello I'm Asaréel <b>/(Asareel)/ </b>, a student pursuing
                      a master degree in computer science at <span className='link-design' onClick={() => openInTab("https://www.uqac.ca")}>UQAC</span> (Saguenay, Quebec) who
                     previously worked mostly

@@ -1,33 +1,37 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, Props} from 'react';
 import './Header.css'
 import {FaArrowDown, FaLinkedinIn, FaMailBulk} from "react-icons/fa"
 import {Link} from 'react-router-dom'
 
-const Header = () => {
+const Header = (props: any) => {
+    const openInTab = (url: string): void => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
+
     return (
         <Fragment>
-            <div className='container-fluid Banner'>
-                <p className='Name'> Asaréel DADIOUARI </p>
+            <div ref={props.reference} className='container-fluid Banner'>
+                <p className='Name' > Asaréel DADIOUARI </p>
                 <div className='NavBar'>
                     <Link to='/'>
-                        <p className='NavBarElement'>Home</p>
+                        <p onClick={() => props.homeClick(true)} className='NavBarElement'>Home</p>
                     </Link>
-                    <Link to='/Projects'>
-                        <p className='NavBarElement'>Projects</p>
+                    <Link to='/'>
+                        <p onClick={() => props.projectClick(true)} className='NavBarElement'>Projects</p>
                     </Link>
-                    <Link to='/About'>
-                        <p className='NavBarElement'>About</p>
+                    <Link to='/'>
+                        <p onClick={() => props.aboutClick(true)} className='NavBarElement'>About</p>
                     </Link>
                 </div>
             </div>
             <div className='Header-Content'>
-                <p className='display-3 text-center Header-Statement'> Computer Science student at <br/>
-                    <a className='Uqac-link' target='_blank' rel="noopener noreferrer"
-                       href='https://www.uqac.ca/'>
+                <p className='display-3 text-center Header-Statement'> MSc. CS student at <br/>
+                    <span className='Uqac-link' onClick={() => openInTab('https://www.uqac.ca')}>
                         <img height="100px" className='Uqac-logo'
                              src='https://www.uqac.ca/wp-content/themes/uqac/assets/images/uqac.svg'
                              alt='Logo'/>
-                    </a>
+                    </span>
                 </p>
                 <div className="container row">
                     <a title='Linkedin' target='_blank' rel="noopener noreferrer"
@@ -36,9 +40,12 @@ const Header = () => {
                 </div>
                 <div className="container row">
                     <a title='Email' href='mailto:asareel.y.dadiouari@gmail.com'> <FaMailBulk className='email-logo'
-                                                                                              fontSize="35px"/> </a>
+                        fontSize="35px"/> 
+                    </a>
                 </div>
-                <FaArrowDown href='#id' className='arrow-down' fontSize="50px"/>
+                <span onClick={() => props.aboutClick(true)} ref={props.referenceArrow}>
+                    <FaArrowDown href='#id' className='arrow-down' fontSize="50px"/>
+                </span>
             </div>
         </Fragment>
     );

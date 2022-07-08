@@ -1,8 +1,8 @@
-import React from 'react';
+import React,  { useEffect } from 'react';
 import './Work.css'
 import {Button, Table} from 'react-bootstrap'
 
-const Work = () => {
+const Work = (props: any) => {
     const openInTab = (url: string): void => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
@@ -10,7 +10,7 @@ const Work = () => {
 
     return (
         <div className="container Work">
-            <p className="my-top-projects">Projects</p>
+            <p className="my-top-projects" ref={props.reference}>Projects</p>
             <Table className='Table' striped bordered hover size="sm">
                 <thead>
                 <tr>
