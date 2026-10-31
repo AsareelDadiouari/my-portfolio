@@ -2,7 +2,9 @@
 
 Personal portfolio built with React 19, TypeScript and Vite.
 
-Live: https://my-portfolio-2f4de.web.app/
+Live: https://asareeldadiouari.github.io/my-portfolio/
+
+Deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `master`.
 
 ## Develop
 
