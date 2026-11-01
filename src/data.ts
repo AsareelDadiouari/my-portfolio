@@ -18,7 +18,7 @@ export const profile = {
 /** Interface copy that isn't tied to a specific entry. */
 export const ui = {
   meta: {
-    title: { en: 'Asaréel Dadiouari — Full-Stack Developer', fr: 'Asaréel Dadiouari — Développeur full-stack' },
+    title: { en: 'Asaréel Dadiouari, Full-Stack Developer', fr: 'Asaréel Dadiouari, Développeur full-stack' },
     description: {
       en: 'Full-stack developer (Angular, .NET, PostgreSQL) with a master’s in computer science. Experience, projects and contact.',
       fr: 'Développeur full-stack (Angular, .NET, PostgreSQL) titulaire d’une maîtrise en informatique. Expérience, projets et contact.',
@@ -39,8 +39,8 @@ export const ui = {
   hero: {
     role: { en: 'Full-stack developer', fr: 'Développeur full-stack' },
     lede: {
-      en: 'Full-stack developer specializing in Angular and .NET. I design and deliver dependable web applications — from enterprise healthcare software to SaaS platforms in production — with a focus on clean architecture, security and user experience. Master’s in Computer Science from',
-      fr: 'Développeur full-stack spécialisé en Angular et .NET. Je conçois et livre des applications web fiables — des logiciels de santé d’entreprise aux plateformes SaaS en production — avec un souci constant de l’architecture, de la sécurité et de l’expérience utilisateur. Maîtrise en informatique de l’',
+      en: 'Full-stack developer shipping Angular, .NET and PostgreSQL software from enterprise healthcare to production SaaS, with a Master’s in Computer Science from',
+      fr: 'Développeur full-stack concevant des applications Angular, .NET et PostgreSQL de la santé d’entreprise au SaaS en production, titulaire d’une maîtrise en informatique de l’',
     },
     cta: { en: 'View my work', fr: 'Voir mes réalisations' },
     resume: { en: 'Résumé', fr: 'CV' },
@@ -48,7 +48,7 @@ export const ui = {
   stats: [
     { value: { en: 'Since 2020', fr: 'Depuis 2020' }, label: { en: 'in software development', fr: 'en développement logiciel' } },
     { value: { en: 'M.Sc.', fr: 'M. Sc.' }, label: { en: 'in Computer Science', fr: 'en informatique' } },
-    { value: { en: 'FR · EN', fr: 'FR · EN' }, label: { en: 'bilingual', fr: 'bilingue' } },
+    { value: { en: 'FR / EN', fr: 'FR / EN' }, label: { en: 'bilingual', fr: 'bilingue' } },
   ],
   sections: {
     about: { en: 'About', fr: 'À propos' },
@@ -83,7 +83,7 @@ export const ui = {
     title: { en: 'Interested in working together?', fr: 'Envie de collaborer ?' },
     accent: { en: 'Get in touch.', fr: 'Écrivez-moi.' },
     copy: { en: 'Copy email', fr: 'Copier le courriel' },
-    copied: { en: 'Copied!', fr: 'Copié !' },
+    copied: { en: 'Copied', fr: 'Copié' },
   },
   timeZone: { en: 'Eastern Time', fr: 'heure de l’Est' },
   previously: { en: 'Previously:', fr: 'Auparavant :' },
@@ -106,7 +106,7 @@ export type Job = {
 export const experience: Job[] = [
   {
     id: 'uqac-pro',
-    org: 'UQAC — Chaire TDS / LaboNFC',
+    org: 'UQAC, Chaire TDS / LaboNFC',
     place: { en: 'Chicoutimi, QC (remote)', fr: 'Chicoutimi, QC (à distance)' },
     title: { en: 'DevOps Manager', fr: 'Gestionnaire DevOps' },
     start: '2026-01',
@@ -152,15 +152,15 @@ export const experience: Job[] = [
   },
   {
     id: 'uqac-ra',
-    org: 'UQAC — LaboNFC',
+    org: 'UQAC, LaboNFC',
     place: { en: 'Chicoutimi, QC', fr: 'Chicoutimi, QC' },
     title: { en: 'Research Assistant — Master’s', fr: 'Assistant de recherche — Maîtrise' },
     start: '2023-06',
     end: '2024-06',
     points: [
       {
-        en: 'Contributed to the PME 4.0 project: a digital transformation survey of 30 SMEs in Saguenay–Lac-Saint-Jean.',
-        fr: 'Contribution au projet PME 4.0 : sondage sur le virage numérique de 30 PME du Saguenay–Lac-Saint-Jean.',
+        en: 'Contributed to the PME 4.0 project: a digital transformation survey of 30 SMEs in Saguenay-Lac-Saint-Jean.',
+        fr: 'Contribution au projet PME 4.0 : sondage sur le virage numérique de 30 PME du Saguenay-Lac-Saint-Jean.',
       },
       {
         en: 'Built a self-audit questionnaire platform for SMEs.',
@@ -239,19 +239,19 @@ export const education: { id: string; degree: L; school: L }[] = [
   {
     id: 'msc',
     degree: { en: 'Master’s in Computer Science', fr: 'Maîtrise en informatique' },
-    school: { en: 'Université du Québec à Chicoutimi — Saguenay, QC', fr: 'Université du Québec à Chicoutimi — Saguenay, QC' },
+    school: { en: 'Université du Québec à Chicoutimi, Saguenay, QC', fr: 'Université du Québec à Chicoutimi, Saguenay, QC' },
   },
   {
     id: 'bsc',
     degree: { en: 'Bachelor’s in Computer Science', fr: 'Licence (baccalauréat) en informatique' },
-    school: { en: 'Université Côte d’Azur — Biot, France', fr: 'Université Côte d’Azur — Biot, France' },
+    school: { en: 'Université Côte d’Azur, Biot, France', fr: 'Université Côte d’Azur, Biot, France' },
   },
   {
     id: 'prep',
     degree: { en: 'Preparatory Classes (Engineering)', fr: 'Classes préparatoires' },
     school: {
-      en: 'École Marocaine des Sciences de l’Ingénieur — Casablanca, Morocco',
-      fr: 'École Marocaine des Sciences de l’Ingénieur — Casablanca, Maroc',
+      en: 'École Marocaine des Sciences de l’Ingénieur, Casablanca, Morocco',
+      fr: 'École Marocaine des Sciences de l’Ingénieur, Casablanca, Maroc',
     },
   },
 ];
@@ -270,11 +270,12 @@ export type Project = {
 export const featured: Project & { url: string } = {
   name: 'PMO 5.0',
   summary: {
-    en: 'A self-audit SaaS platform for SMEs, built for the Chaire TDS at UQAC as part of a MITACS research project. I lead its development: server-side PDF reports, partner spaces, an admin console, passkeys and two-step verification — shipped with CI/CD and automated tests.',
-    fr: 'Une plateforme SaaS d’auto-audit pour les PME, conçue pour la Chaire TDS de l’UQAC dans le cadre d’un projet de recherche MITACS. J’en dirige le développement : rapports PDF côté serveur, espaces partenaires, console d’administration, passkeys et vérification en deux étapes — livrés avec CI/CD et tests automatisés.',
+    en: 'A self-audit SaaS platform for SMEs, built for the Chaire TDS at UQAC as part of a MITACS research project. I lead its development: server-side PDF reports, partner spaces, an admin console, passkeys and two-step verification, shipped with CI/CD and automated tests.',
+    fr: 'Une plateforme SaaS d’auto-audit pour les PME, conçue pour la Chaire TDS de l’UQAC dans le cadre d’un projet de recherche MITACS. J’en dirige le développement : rapports PDF côté serveur, espaces partenaires, console d’administration, passkeys et vérification en deux étapes, livrés avec CI/CD et tests automatisés.',
   },
   stack: ['Angular', '.NET 10', 'PostgreSQL', 'QuestPDF', 'Docker', 'GitHub Actions', 'Cloudflare'],
   url: 'https://autoauditpmo5-0.com',
+  image: './screens/pmo5-desktop.png',
 };
 
 // Templates for upcoming projects — edit the name, summary and stack as they take shape,
@@ -326,8 +327,8 @@ export const skills: { id: string; group: L; items: (string | L)[] }[] = [
     id: 'langs',
     group: { en: 'Languages', fr: 'Langues' },
     items: [
-      { en: 'French — native', fr: 'Français — langue maternelle' },
-      { en: 'English — professional (TOEIC 880)', fr: 'Anglais — professionnel (TOEIC 880)' },
+      { en: 'French, native', fr: 'Français, langue maternelle' },
+      { en: 'English, professional (TOEIC 880)', fr: 'Anglais, professionnel (TOEIC 880)' },
     ],
   },
 ];

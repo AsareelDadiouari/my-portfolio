@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Asaréel Dadiouari — Full-Stack Developer</title>
+    <title>Asaréel Dadiouari, Full-Stack Developer</title>
     <meta name="description" content="Full-stack developer (Angular, .NET, PostgreSQL) with a master’s in computer science. Experience, projects and contact." />
-    <meta name="theme-color" content="#0e0e10" />
-    <meta property="og:title" content="Asaréel Dadiouari — Full-Stack Developer" />
-    <meta property="og:description" content="Full-stack developer · Développeur full-stack — Angular, .NET, PostgreSQL." />
+    <meta name="theme-color" content="#f3f6f8" />
+    <meta property="og:title" content="Asaréel Dadiouari, Full-Stack Developer" />
+    <meta property="og:description" content="Full-stack developer (Angular, .NET, PostgreSQL). Production SaaS platforms, enterprise software, and architecture." />
     <meta property="og:type" content="website" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="./favicon.ico" sizes="48x48" />
@@ -15,11 +15,13 @@
     <link rel="manifest" href="./manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Geist:wght@400;500&family=Sofia+Sans+Extra+Condensed:wght@500&display=swap" rel="stylesheet" />
     <script>
+      document.documentElement.classList.add('js');
       try {
-        var t = localStorage.getItem('theme');
-        if (t) document.documentElement.dataset.theme = t;
+        var t = localStorage.getItem('theme') || 'light';
+        document.documentElement.dataset.theme = t;
+        document.documentElement.dataset.mode = t;
         var l = localStorage.getItem('lang') || (navigator.language.toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en');
         document.documentElement.lang = l;
       } catch (e) {}
@@ -28,6 +30,23 @@
   <body>
     <noscript>You need to enable JavaScript to view this site.</noscript>
     <div id="root"></div>
+    <script>
+      window.hallmarkSlots = (m) => {
+        for (const [k, v] of Object.entries(m)) {
+          const s = document.querySelector(`[data-slot="${k}"]`);
+          if (!s) continue;
+          const im = new Image();
+          im.src = typeof v === 'string' ? v : v.src;
+          im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || '';
+          s.querySelectorAll(':scope > img').forEach((o) => o.remove());
+          s.prepend(im);
+        }
+      };
+      document.querySelectorAll('[data-slot] img').forEach((i) => {
+        if (i.complete && !i.naturalWidth) i.remove();
+        else i.addEventListener('error', () => i.remove(), { once: true });
+      });
+    </script>
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
