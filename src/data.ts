@@ -79,6 +79,7 @@ export const ui = {
   live: { en: 'Live in production', fr: 'En production' },
   visit: { en: 'Visit site', fr: 'Voir le site' },
   building: { en: 'In development', fr: 'En développement' },
+  shipped: { en: 'Shipped', fr: 'Terminé' },
   soon: { en: 'Coming soon', fr: 'Bientôt disponible' },
   moreGithub: { en: 'View GitHub profile', fr: 'Voir mon profil GitHub' },
   contact: {
