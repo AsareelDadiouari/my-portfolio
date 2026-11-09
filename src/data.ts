@@ -298,6 +298,7 @@ export const projects: Project[] = [
       fr: 'On dépose des PDF (normes, politiques internes, documentation technique) et on pose ses questions en langage naturel : les réponses sont générées par RAG (génération augmentée par récupération), diffusées en direct et citent les pages sources. Ingestion en arrière-plan et recherche vectorielle dans PostgreSQL avec pgvector.',
     },
     stack: ['Angular', 'ASP.NET Core', 'PostgreSQL', 'pgvector', 'Claude API'],
+    url: 'https://github.com/AsareelDadiouari/document-qa-assistant',
     building: true,
   },
   {
@@ -308,7 +309,6 @@ export const projects: Project[] = [
     },
     stack: ['Python', 'MCP', 'pandas', 'yfinance', 'pytest', 'GitHub Actions'],
     url: 'https://github.com/AsareelDadiouari/stock-market-analyst-mcp',
-    building: true,
   },
 ];
 
