@@ -348,7 +348,7 @@ function ProjectMedia({ project, index }: { project: Project; index: number }) {
         <div className="specimen-ui" data-keep>
           <div className="specimen-ui__head">
             <span>{project.name}</span>
-            <span className="num">{isStocks ? 'NYSE / TSX sample feed' : 'Pipeline view, 3 stages'}</span>
+            <span className="num">{isStocks ? 'MCP tool call (sample)' : 'Pipeline view, 3 stages'}</span>
           </div>
           {isStocks ? (
             <div className="specimen-ui__body">
@@ -362,8 +362,8 @@ function ProjectMedia({ project, index }: { project: Project; index: number }) {
                   <strong className="num">54.2</strong>
                 </div>
                 <div>
-                  <small>Forecast window</small>
-                  <strong className="num">30 days</strong>
+                  <small>Tool</small>
+                  <strong className="num">backtest</strong>
                 </div>
               </div>
               <svg className="specimen-ui__chart" viewBox="0 0 360 110" aria-label="Sample technical analysis chart">
@@ -377,7 +377,7 @@ function ProjectMedia({ project, index }: { project: Project; index: number }) {
                   points="8,82 58,74 108,61 158,68 208,46 258,39 308,28 352,22"
                 />
                 <text x="8" y="18" fontSize="10" fill="currentColor">
-                  Moving average and ML confidence band (sample)
+                  Price with SMA / Bollinger overlay (sample)
                 </text>
               </svg>
             </div>
@@ -628,8 +628,8 @@ function About() {
               </div>
               <div className="about__specimen-row">
                 <span className="num muted">03 / Operations and security</span>
-                <strong>Docker, GitHub Actions, Azure DevOps, Cloudflare</strong>
-                <span>Passkeys, two-step verification, xUnit and Vitest suites</span>
+                <strong>Docker, GitHub Actions, Cloudflare Workers, Render</strong>
+                <span>Passkeys, two-step verification, Playwright, xUnit and Vitest suites</span>
               </div>
             </div>
           </div>

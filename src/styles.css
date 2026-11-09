@@ -660,6 +660,8 @@
 }
 
 .featured__visual {
+  /* Explicit width so min-height can't widen the box past its grid column via aspect-ratio. */
+  width: 100%;
   aspect-ratio: 16 / 9;
   min-height: 360px;
   border-right: var(--rule-hair) solid var(--color-ink);
