@@ -28,6 +28,7 @@ export const ui = {
     about: { en: 'About', fr: 'À propos' },
     work: { en: 'Experience', fr: 'Expérience' },
     projects: { en: 'Projects', fr: 'Projets' },
+    side: { en: 'Side projects', fr: 'Projets perso' },
     skills: { en: 'Skills', fr: 'Compétences' },
     contact: { en: 'Contact', fr: 'Contact' },
     menu: { en: 'Menu', fr: 'Menu' },
@@ -55,6 +56,7 @@ export const ui = {
     work: { en: 'Experience', fr: 'Expérience' },
     education: { en: 'Education', fr: 'Formation' },
     projects: { en: 'Projects', fr: 'Réalisations' },
+    side: { en: 'Personal projects', fr: 'Projets personnels' },
     skills: { en: 'Skills', fr: 'Compétences' },
     contact: { en: 'Contact', fr: 'Contact' },
   },
@@ -290,12 +292,12 @@ export const featured: Project & { url: string } = {
 // then add `url` (repo or live demo) and an `image`, and remove `building` once shipped.
 export const projects: Project[] = [
   {
-    name: 'Job Application Tracker',
+    name: 'Document Q&A Assistant (RAG)',
     summary: {
-      en: 'A web app to organize a job search in one place: track every application through each stage, keep notes and contacts, set follow-up reminders and see your pipeline at a glance.',
-      fr: 'Une application web pour centraliser sa recherche d’emploi : suivre chaque candidature à chaque étape, garder notes et contacts, programmer des relances et visualiser son pipeline d’un coup d’œil.',
+      en: 'Upload PDFs (standards, internal policies, technical docs) and ask questions in plain language: answers are generated with retrieval-augmented generation (RAG), streamed live and cite the exact source pages. Background ingestion and vector search in PostgreSQL with pgvector.',
+      fr: 'On dépose des PDF (normes, politiques internes, documentation technique) et on pose ses questions en langage naturel : les réponses sont générées par RAG (génération augmentée par récupération), diffusées en direct et citent les pages sources. Ingestion en arrière-plan et recherche vectorielle dans PostgreSQL avec pgvector.',
     },
-    stack: ['Angular', '.NET', 'PostgreSQL'],
+    stack: ['Angular', 'ASP.NET Core', 'PostgreSQL', 'pgvector', 'Claude API'],
     building: true,
   },
   {
@@ -305,7 +307,7 @@ export const projects: Project[] = [
       fr: 'Un serveur Model Context Protocol (MCP) en Python qui donne à Claude et aux autres clients MCP des outils d’analyse boursière : cotations et historique des prix, indicateurs techniques (SMA, EMA, RSI, MACD, bandes de Bollinger), comparaison de titres, analyse structurée d’une action et backtesting de stratégies. Couvert par des tests et une CI GitHub Actions.',
     },
     stack: ['Python', 'MCP', 'pandas', 'yfinance', 'pytest', 'GitHub Actions'],
-    url: 'https://github.com/AsareelDadiouari/stock-analysis-prediction',
+    url: 'https://github.com/AsareelDadiouari/stock-market-analyst-mcp',
     building: true,
   },
 ];
