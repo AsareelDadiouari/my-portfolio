@@ -514,6 +514,10 @@
   border-top: 0;
 }
 
+.section--side {
+  padding-block: var(--section-gap);
+}
+
 .section--band {
   padding-block: var(--section-gap-s);
   background: var(--color-paper-2);

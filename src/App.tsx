@@ -24,7 +24,7 @@ import {
   type Project,
 } from './data';
 
-const sectionIds = ['projects', 'work', 'about', 'skills', 'contact'] as const;
+const sectionIds = ['projects', 'work', 'side', 'about', 'skills', 'contact'] as const;
 
 type Theme = 'light' | 'dark';
 
@@ -348,7 +348,7 @@ function ProjectMedia({ project, index }: { project: Project; index: number }) {
         <div className="specimen-ui" data-keep>
           <div className="specimen-ui__head">
             <span>{project.name}</span>
-            <span className="num">{isStocks ? 'MCP tool call (sample)' : 'Pipeline view, 3 stages'}</span>
+            <span className="num">{isStocks ? 'MCP tool call (sample)' : 'Answer with sources (sample)'}</span>
           </div>
           {isStocks ? (
             <div className="specimen-ui__body">
@@ -385,19 +385,19 @@ function ProjectMedia({ project, index }: { project: Project; index: number }) {
             <div className="specimen-ui__body">
               <div className="specimen-ui__rows">
                 <div className="specimen-ui__row">
-                  <strong>Full-Stack Engineer</strong>
-                  <span>Example Health Corp</span>
-                  <span className="num">Technical interview</span>
+                  <strong>Question</strong>
+                  <span>What is the data retention period?</span>
+                  <span className="num">Retrieved 4 passages</span>
                 </div>
                 <div className="specimen-ui__row">
-                  <strong>.NET Platform Developer</strong>
-                  <span>Sample Financial Ltd</span>
-                  <span className="num">Application sent</span>
+                  <strong>Source 1</strong>
+                  <span>privacy-policy.pdf</span>
+                  <span className="num">p. 12, score 0.87</span>
                 </div>
                 <div className="specimen-ui__row">
-                  <strong>Angular Lead</strong>
-                  <span>North Studio Inc</span>
-                  <span className="num">Follow-up scheduled</span>
+                  <strong>Source 2</strong>
+                  <span>records-standard.pdf</span>
+                  <span className="num">p. 4, score 0.81</span>
                 </div>
               </div>
             </div>
@@ -509,6 +509,22 @@ function Projects() {
         </div>
         <div className="projects">
           <Featured />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SideProjects() {
+  const t = useT();
+
+  return (
+    <section id="side" className="section section--side">
+      <div className="container">
+        <div className="section-head">
+          <h2>{t(ui.sections.side)}</h2>
+        </div>
+        <div className="projects">
           {projects.map((p, i) => (
             <ProjectCard key={p.name} project={p} index={i + 2} />
           ))}
@@ -770,6 +786,7 @@ export default function App() {
         <Hero />
         <Projects />
         <Experience />
+        <SideProjects />
         <About />
         <Skills />
         <Contact />
