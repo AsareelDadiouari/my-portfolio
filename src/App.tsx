@@ -24,7 +24,7 @@ import {
   type Project,
 } from './data';
 
-const sectionIds = ['projects', 'work', 'about', 'skills', 'contact'] as const;
+const sectionIds = ['projects', 'work', 'side', 'about', 'skills', 'contact'] as const;
 
 type Theme = 'light' | 'dark';
 
@@ -509,6 +509,22 @@ function Projects() {
         </div>
         <div className="projects">
           <Featured />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SideProjects() {
+  const t = useT();
+
+  return (
+    <section id="side" className="section section--side">
+      <div className="container">
+        <div className="section-head">
+          <h2>{t(ui.sections.side)}</h2>
+        </div>
+        <div className="projects">
           {projects.map((p, i) => (
             <ProjectCard key={p.name} project={p} index={i + 2} />
           ))}
@@ -770,6 +786,7 @@ export default function App() {
         <Hero />
         <Projects />
         <Experience />
+        <SideProjects />
         <About />
         <Skills />
         <Contact />
