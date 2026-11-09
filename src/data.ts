@@ -124,8 +124,16 @@ export const experience: Job[] = [
         en: 'Built server-side PDF reports, partner spaces, an administration console and account security (passkeys, two-step verification), with continuous deployment and automated testing.',
         fr: 'Rapports PDF générés côté serveur, espaces partenaires, console d’administration et sécurité des comptes (passkeys, vérification en deux étapes), avec déploiement continu et tests automatisés.',
       },
+      {
+        en: 'Replaced a third-party survey tool with an in-house questionnaire and report builder, and exposed a partner REST API with signed webhooks.',
+        fr: 'Remplacement d’un outil de questionnaire tiers par un constructeur de questionnaires et de rapports maison, et mise en place d’une API REST partenaires avec webhooks signés.',
+      },
+      {
+        en: 'Deployed on Cloudflare Workers and Render; Playwright end-to-end tests, Gitleaks secret scanning in CI and Law 25 (Québec privacy) compliance.',
+        fr: 'Déploiement sur Cloudflare Workers et Render ; tests de bout en bout Playwright, détection de secrets Gitleaks en CI et conformité à la Loi 25.',
+      },
     ],
-    stack: ['Angular', '.NET 10', 'PostgreSQL', 'QuestPDF', 'Docker', 'GitHub Actions', 'Cloudflare', 'xUnit', 'Vitest'],
+    stack: ['Angular 22', 'ASP.NET Core', '.NET 10', 'PostgreSQL', 'QuestPDF', 'Docker', 'GitHub Actions', 'Cloudflare Workers', 'Render', 'Playwright', 'xUnit', 'Vitest', 'Gitleaks'],
   },
   {
     id: 'healthcare',
@@ -270,10 +278,10 @@ export type Project = {
 export const featured: Project & { url: string } = {
   name: 'PMO 5.0',
   summary: {
-    en: 'A self-audit SaaS platform for SMEs, built for the Chaire TDS at UQAC as part of a MITACS research project. I lead its development: server-side PDF reports, partner spaces, an admin console, passkeys and two-step verification, shipped with CI/CD and automated tests.',
-    fr: 'Une plateforme SaaS d’auto-audit pour les PME, conçue pour la Chaire TDS de l’UQAC dans le cadre d’un projet de recherche MITACS. J’en dirige le développement : rapports PDF côté serveur, espaces partenaires, console d’administration, passkeys et vérification en deux étapes, livrés avec CI/CD et tests automatisés.',
+    en: 'A self-audit SaaS platform for Québec SMEs, built for the Chaire TDS at UQAC within a MITACS research project. I lead its development: an in-house questionnaire and report builder replacing a third-party tool, server-side PDF reports, a partner REST API with signed webhooks, passkeys and Law 25 privacy compliance. Runs on Cloudflare Workers and Render, with CI/CD, Playwright E2E tests and Gitleaks.',
+    fr: 'Une plateforme SaaS d’auto-audit pour les PME québécoises, conçue pour la Chaire TDS de l’UQAC dans le cadre d’un projet de recherche MITACS. J’en dirige le développement : constructeur de questionnaires et de rapports maison remplaçant un outil tiers, rapports PDF côté serveur, API REST partenaires avec webhooks signés, passkeys et conformité à la Loi 25. Hébergée sur Cloudflare Workers et Render, avec CI/CD, tests E2E Playwright et Gitleaks.',
   },
-  stack: ['Angular', '.NET 10', 'PostgreSQL', 'QuestPDF', 'Docker', 'GitHub Actions', 'Cloudflare'],
+  stack: ['Angular 22', 'ASP.NET Core (.NET 10)', 'PostgreSQL', 'QuestPDF', 'Cloudflare Workers', 'Render', 'Playwright', 'GitHub Actions'],
   url: 'https://autoauditpmo5-0.com',
   image: './screens/pmo5-desktop.png',
 };
@@ -291,12 +299,13 @@ export const projects: Project[] = [
     building: true,
   },
   {
-    name: 'Stock Analysis & Prediction',
+    name: 'Stock Market Analyst MCP',
     summary: {
-      en: 'A tool that pulls market data, runs technical analysis on stocks and experiments with machine-learning models to forecast price trends, with interactive charts to explore the results.',
-      fr: 'Un outil qui récupère des données boursières, effectue l’analyse technique des actions et expérimente des modèles d’apprentissage automatique pour prévoir les tendances, avec des graphiques interactifs pour explorer les résultats.',
+      en: 'A Python Model Context Protocol (MCP) server that gives Claude and other MCP clients stock-analysis tools: quotes and price history, technical indicators (SMA, EMA, RSI, MACD, Bollinger Bands), ticker comparison, a structured stock analysis and strategy backtesting. Covered by tests and GitHub Actions CI.',
+      fr: 'Un serveur Model Context Protocol (MCP) en Python qui donne à Claude et aux autres clients MCP des outils d’analyse boursière : cotations et historique des prix, indicateurs techniques (SMA, EMA, RSI, MACD, bandes de Bollinger), comparaison de titres, analyse structurée d’une action et backtesting de stratégies. Couvert par des tests et une CI GitHub Actions.',
     },
-    stack: ['Python', 'Machine Learning', 'Angular'],
+    stack: ['Python', 'MCP', 'pandas', 'yfinance', 'pytest', 'GitHub Actions'],
+    url: 'https://github.com/AsareelDadiouari/stock-analysis-prediction',
     building: true,
   },
 ];
@@ -316,12 +325,21 @@ export const skills: { id: string; group: L; items: (string | L)[] }[] = [
   {
     id: 'test',
     group: { en: 'Testing', fr: 'Tests' },
-    items: ['Jasmine', 'Karma', 'Vitest', 'xUnit', 'JUnit', 'Cucumber', { en: 'Integration & E2E', fr: 'Intégration et bout en bout' }],
+    items: ['Playwright', 'Vitest', 'Jasmine', 'Karma', 'xUnit', 'pytest', 'JUnit', 'Cucumber', { en: 'Integration & E2E', fr: 'Intégration et bout en bout' }],
+  },
+  {
+    id: 'ai',
+    group: { en: 'AI tooling', fr: 'Outils IA' },
+    items: [
+      'Model Context Protocol (MCP)',
+      'Claude / Claude Code',
+      { en: 'LLM tool integration', fr: 'Intégration d’outils pour LLM' },
+    ],
   },
   {
     id: 'tools',
-    group: { en: 'Tools', fr: 'Outils' },
-    items: ['Git', 'GitHub Actions', 'Azure DevOps', 'Docker', 'Cloudflare', 'Linux', 'Jira', 'UML', { en: 'Agile', fr: 'Agilité' }],
+    group: { en: 'DevOps & tools', fr: 'DevOps et outils' },
+    items: ['Git', 'GitHub Actions', 'Azure DevOps', 'Docker', 'Cloudflare Workers', 'Render', 'Gitleaks', 'Linux', 'Jira', 'UML', { en: 'Agile', fr: 'Agilité' }],
   },
   {
     id: 'langs',
