@@ -473,7 +473,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               <FiTool aria-hidden="true" /> {t(ui.building)}
             </span>
           ) : (
-            <span className="num muted">{String(index).padStart(2, '0')}</span>
+            <span className="badge">
+              <FiCheck aria-hidden="true" /> {t(ui.shipped)}
+            </span>
           )}
           {project.url ? (
             <FiArrowUpRight className="project__arrow" aria-hidden="true" />
